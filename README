@@ -1,0 +1,41 @@
+iCal2GCal
+=========
+
+Takes a .ics file and adds the events to the Google Calendar. Excellent to tie
+to .ics files for easy-clicking in browsers on .ics links.
+
+Installation
+------------
+You need ruby 1.8, the "googlecalendar" gem, and the ruby-gnome2 devkit. In
+Ubuntu you can do:
+
+$ sudo gem install googlecalendar
+$ sudo apt-get install ruby-gnome2
+
+Configuration
+-------------
+
+There's only one file, ical2gcal.rb. Set the USERNAME, and PASSWORD to the
+correct values. Optionally you can select one of your calendars and set
+DEFAULT_CAL to it's title. This calendar will then be selected by default,
+but you'll always be asked to confirm the addition for safety reasons.
+
+Usage
+-----
+
+Execute ical2gcal.rb with a .ics file as a paramater:
+
+$ ./ical2gcal.rb event.ics
+
+A window will appear asking you to select the calendar you wish to add this 
+event or these events to and to confirm the addition.
+
+Best results are obtained when you configure your browser to open .ics files
+with ical2gcal. You can then click on .ics links to add them to Google Calendar
+directly, without having to save and manually import them.
+
+License
+-------
+
+iCal2GCal is Copyright (C) 2009 David Verhasselt (david@crowdway.com) and 
+licensed under the MIT License (see file LICENSE).
